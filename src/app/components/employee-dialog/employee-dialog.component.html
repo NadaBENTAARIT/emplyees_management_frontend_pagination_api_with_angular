@@ -1,0 +1,73 @@
+<h1 mat-dialog-title>Add Employee</h1>
+<div mat-dialog-content>
+  <form #employeeForm="ngForm">
+    <!-- First Name Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>First Name</mat-label>
+      <input matInput [(ngModel)]="data.firstName" name="firstName" required #firstName="ngModel" />
+      <mat-error *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+        First Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Last Name Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Last Name</mat-label>
+      <input matInput [(ngModel)]="data.lastName" name="lastName" required #lastName="ngModel" />
+      <mat-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+        Last Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Age Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Age</mat-label>
+      <input matInput type="number" [(ngModel)]="data.age" name="age" required #age="ngModel" />
+      <mat-error *ngIf="age.invalid && (age.dirty || age.touched)">
+        Age is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="data.email" name="email" required #email="ngModel" email />
+      <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+        A valid Email is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Salary Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Salary</mat-label>
+      <input matInput type="number" [(ngModel)]="data.salary" name="salary" required #salary="ngModel" />
+      <mat-error *ngIf="salary.invalid && (salary.dirty || salary.touched)">
+        Salary is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Address Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Address</mat-label>
+      <input matInput [(ngModel)]="data.address" name="address" required #address="ngModel" />
+      <mat-error *ngIf="address.invalid && (address.dirty || address.touched)">
+        Address is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Contact Number Field -->
+    <mat-form-field appearance="standard">
+      <mat-label>Contact Number</mat-label>
+      <input matInput [(ngModel)]="data.contactNumber" name="contactNumber" required #contactNumber="ngModel" />
+      <mat-error *ngIf="contactNumber.invalid && (contactNumber.dirty || contactNumber.touched)">
+        Contact Number is required.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <!-- Cancel and Submit Buttons -->
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button mat-button class="add-button" [disabled]="!employeeForm.valid" (click)="onSubmit(employeeForm)" cdkFocusInitial>Add</button>
+</div>

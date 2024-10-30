@@ -1,0 +1,223 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Table container styling */
+.table-container {
+    margin: 20px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table header styling */
+th.mat-header-cell {
+    background-color: #0033a0 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 20px;
+}
+
+/* Action and filter field container */
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Add Employee button styling */
+.add-employee-button {
+    height: 48px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.add-employee-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.02);
+}
+
+/* Icon styling inside buttons */
+.add-employee-button mat-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Action column styling */
+.mat-header-cell.mat-column-actions,
+.mat-cell.mat-column-actions {
+    text-align: center;
+}
+
+/* Delete button styling */
+.delete-employee-button {
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    color: #da1717;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0;
+    border: none;
+}
+
+.delete-employee-button mat-icon {
+    color: #da1717;
+    font-size: 20px;
+}
+
+.delete-employee-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Filter field styling */
+.filter-field {
+    width: 200px;
+    border-radius: 4px;
+    padding: 0 12px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+.filter-field input {
+    border: none;
+    outline: none;
+    height: 32px;
+    padding-left: 8px;
+    background-color: transparent;
+    color: #424242;
+    width: 100%;
+}
+
+.filter-field mat-icon {
+    color: #0033a0;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+th {
+    background-color: #0033a0;
+    color: #ffffff;
+    padding: 20px;
+    font-weight: 600;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #424242;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Styling for even rows */
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Paginator styling */
+.paginator-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    max-height: 60px;
+    padding: 12px 0;
+    background-color: #fafafa;
+}
+
+.mat-paginator, .mat-paginator-range-label, .mat-select-value-text, .mat-option-text {
+    font-size: 14px;
+    color: #424242;
+}
+
+.mat-paginator-icon, .mat-select-arrow {
+    color: #0033a0;
+}
+
+.mat-form-field {
+    min-width: 140px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .actions-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-field,
+    .add-employee-button,
+    .delete-employee-button {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}
+
+/* Sort arrow styling */
+::ng-deep .mat-sort-header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+}
+
+::ng-deep .mat-header-cell .mat-sort-header-arrow,
+::ng-deep .mat-sort-header-button .mat-sort-header-arrow {
+    color: white !important;
+}
+
+::ng-deep .mat-header-cell.mat-sort-header-sorted .mat-sort-header-arrow {
+    color: green !important;
+}
+
+::ng-deep .mat-header-cell .mat-sort-header-arrow::before,
+::ng-deep .mat-header-cell .mat-sort-header-arrow::after {
+    border-color: white !important;
+}
+
+::ng-deep .mat-header-cell.mat-sort-header-sorted .mat-sort-header-arrow::before,
+::ng-deep .mat-header-cell.mat-sort-header-sorted .mat-sort-header-arrow::after {
+    border-color: green !important;
+}
+
+::ng-deep .mat-header-cell:hover .mat-sort-header-arrow,
+::ng-deep .mat-header-cell.mat-sort-header-sorted:hover .mat-sort-header-arrow {
+    color: green !important;
+}
